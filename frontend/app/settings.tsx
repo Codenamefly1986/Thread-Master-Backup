@@ -208,14 +208,6 @@ export default function Settings() {
             <Text style={styles.infoLabel}>VERSION</Text>
             <Text style={styles.infoValue}>1.0.0</Text>
           </View>
-          <View style={styles.infoRow}>
-            <Text style={styles.infoLabel}>THREAD STANDARDS</Text>
-            <Text style={styles.infoValue}>ASME B1.1 · ISO 261</Text>
-          </View>
-          <View style={styles.infoRow}>
-            <Text style={styles.infoLabel}>DRILL STANDARDS</Text>
-            <Text style={styles.infoValue}>B94.11M · DIN 338</Text>
-          </View>
         </View>
       </ScrollView>
     </View>
