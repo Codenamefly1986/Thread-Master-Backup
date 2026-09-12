@@ -22,9 +22,9 @@ const THREADS: MenuItem[] = [
 ];
 
 const TOOLS: MenuItem[] = [
-  { id: "calculator", icon: "calculator-variant", kicker: "GEOMETRY", title: "DRILL TIP", desc: "Point length from Ø + tip angle", route: { pathname: "/calculator" } },
+  { id: "calculator", icon: "calculator-variant", kicker: "GEOMETRY", title: "DRILL TIP CALCULATOR", desc: "", route: { pathname: "/calculator" } },
   { id: "drills", icon: "format-list-bulleted", kicker: "436 SIZES", title: "DRILLS", desc: "Frac · Wire · Letter · Metric", route: { pathname: "/drills" } },
-  { id: "tap-chart", icon: "table", kicker: "CUT · FORM", title: "TAP CHART", desc: "Thread → tap drill lookup", route: { pathname: "/tap-chart" } },
+  { id: "tap-chart", icon: "table", kicker: "CUT · FORM", title: "TAP CHART", desc: "", route: { pathname: "/tap-chart" } },
 ];
 
 const useStyles = makeStyles((c) => ({
@@ -148,7 +148,7 @@ export default function Home() {
       <View style={styles.cardBody}>
         <Text style={styles.cardKicker}>{item.kicker}</Text>
         <Text style={styles.cardTitle}>{item.title}</Text>
-        <Text style={styles.cardDesc}>{item.desc}</Text>
+        {item.desc ? <Text style={styles.cardDesc}>{item.desc}</Text> : null}
       </View>
       <MaterialDesignIcons name="chevron-right" size={26} color={colors.primary} />
     </Pressable>
@@ -174,7 +174,6 @@ export default function Home() {
           <MaterialDesignIcons name="cog-outline" size={22} color={colors.text} />
         </Pressable>
       </View>
-      <Text style={styles.tagline}>MACHINIST REFERENCE · WORKS OFFLINE</Text>
 
       <ScrollView
         style={styles.scroll}
@@ -186,8 +185,6 @@ export default function Home() {
 
         <Text style={styles.sectionLabel}>SHOP TOOLS</Text>
         {TOOLS.map(renderCard)}
-
-        <Text style={styles.footer}>ASME B1.1 · ISO 261 · ASME B1.20.1 · B94.11M</Text>
       </ScrollView>
     </View>
   );
