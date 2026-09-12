@@ -1,12 +1,18 @@
 {
   "expo": {
-    "name": "Thread Master",
-    "slug": "thread-pro",
+    "name": "Thread Master Pro",
+    "slug": "thread-master-backup",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "frontend",
     "userInterfaceStyle": "automatic",
+    "owner": "codenamefly1986",
+    "extra": {
+      "eas": {
+        "projectId": "16eb84a4-0bd8-45ce-8d2b-aee2cded3952"
+      }
+    },
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.emergent.drillthreadfusion.v2b52i"
