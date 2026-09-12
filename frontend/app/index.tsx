@@ -159,7 +159,7 @@ export default function Home() {
       <View style={styles.header}>
         <View style={styles.brandRow}>
           <View style={styles.logoBox}>
-            <MaterialDesignIcons name="wrench" size={22} color={colors.onPrimary} />
+            <MaterialDesignIcons name="nut" size={22} color={colors.onPrimary} />
           </View>
           <Text style={styles.brand} testID="app-brand">
             THREAD <Text style={styles.brandAccent}>MASTER</Text>
