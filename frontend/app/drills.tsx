@@ -100,6 +100,7 @@ const useStyles = makeStyles((c) => ({
   },
   th: { fontFamily: fonts.mono, fontSize: 10, letterSpacing: 1, color: c.muted },
   row: { flexDirection: "row", paddingHorizontal: 8, paddingVertical: 12, borderBottomWidth: 1, borderBottomColor: c.divider, alignItems: "center" },
+  rowAlt: { backgroundColor: c.surface },
   rowPressed: { backgroundColor: c.surfaceElevated },
   cell: { fontFamily: fonts.mono, fontSize: 11, color: c.text },
   cellRight: { textAlign: "right" },
@@ -143,7 +144,7 @@ export default function DrillsList() {
           Haptics.selectionAsync().catch(() => {});
           router.push({ pathname: "/drill/[key]", params: { key } } as any);
         }}
-        style={({ pressed }) => [styles.row, pressed && styles.rowPressed]}
+        style={({ pressed }) => [styles.row, index % 2 === 1 && styles.rowAlt, pressed && styles.rowPressed]}
       >
         <Text style={[styles.cell, styles.colFrac, !isFrac && styles.cellMuted]}>{isFrac ? item.label : "·"}</Text>
         <Text style={[styles.cell, styles.colWL, !isWL && styles.cellMuted]}>{isWL ? item.label : "·"}</Text>

@@ -77,6 +77,7 @@ const useStyles = makeStyles((c) => ({
   th: { fontFamily: fonts.mono, fontSize: 10, letterSpacing: 2, color: c.muted, flex: 1 },
   thRight: { textAlign: "right" },
   row: { flexDirection: "row", paddingHorizontal: 12, paddingVertical: 10, borderBottomWidth: 1, borderBottomColor: c.divider },
+  rowAlt: { backgroundColor: c.bg },
   rowLast: { borderBottomWidth: 0 },
   cell: { fontFamily: fonts.mono, fontSize: 13, color: c.text, flex: 1 },
   cellRight: { textAlign: "right", fontFamily: fonts.monoBold, color: c.textStrong },
@@ -95,7 +96,7 @@ function ListSection({ title, rows }: { title: string; rows: Row[] }) {
         <Text style={[styles.th, styles.thRight]}>DRILL</Text>
       </View>
       {rows.map((r, i) => (
-        <View key={`${title}-${i}-${r.thread}`} style={[styles.row, i === rows.length - 1 && styles.rowLast]}>
+        <View key={`${title}-${i}-${r.thread}`} style={[styles.row, i % 2 === 1 && styles.rowAlt, i === rows.length - 1 && styles.rowLast]}>
           <Text style={styles.cell}>{r.thread}</Text>
           <Text style={[styles.cell, styles.cellRight]}>{r.drill}</Text>
         </View>
