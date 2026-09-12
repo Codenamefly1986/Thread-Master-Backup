@@ -202,7 +202,7 @@ export default function Settings() {
         <View>
           <View style={styles.infoRow}>
             <Text style={styles.infoLabel}>APP</Text>
-            <Text style={styles.infoValue}>THREAD PRO</Text>
+            <Text style={styles.infoValue}>THREAD MASTER</Text>
           </View>
           <View style={styles.infoRow}>
             <Text style={styles.infoLabel}>VERSION</Text>

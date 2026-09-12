@@ -162,7 +162,7 @@ export default function Home() {
             <MaterialDesignIcons name="wrench" size={22} color={colors.onPrimary} />
           </View>
           <Text style={styles.brand} testID="app-brand">
-            THREAD <Text style={styles.brandAccent}>PRO</Text>
+            THREAD <Text style={styles.brandAccent}>MASTER</Text>
           </Text>
         </View>
         <Pressable
