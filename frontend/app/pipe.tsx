@@ -62,7 +62,6 @@ export default function PipeSelector() {
       </View>
 
       <View style={styles.body}>
-        <Text style={styles.intro}>Choose the pipe-thread standard you&apos;re working with. All four are available offline.</Text>
         <View style={styles.grid}>
           {PIPE_OPTIONS.map((opt) => (
             <Pressable
