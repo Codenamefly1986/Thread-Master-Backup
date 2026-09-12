@@ -22,7 +22,7 @@ const THREADS: MenuItem[] = [
 ];
 
 const TOOLS: MenuItem[] = [
-  { id: "calculator", icon: "calculator-variant", kicker: "GEOMETRY", title: "DRILL TIP CALCULATOR", desc: "", route: { pathname: "/calculator" } },
+  { id: "calculator", icon: "calculator-variant", kicker: "CALCULATOR", title: "DRILL TIP", desc: "", route: { pathname: "/calculator" } },
   { id: "drills", icon: "format-list-bulleted", kicker: "436 SIZES", title: "DRILLS", desc: "Frac · Wire · Letter · Metric", route: { pathname: "/drills" } },
   { id: "tap-chart", icon: "table", kicker: "CUT · FORM", title: "TAP CHART", desc: "", route: { pathname: "/tap-chart" } },
 ];
